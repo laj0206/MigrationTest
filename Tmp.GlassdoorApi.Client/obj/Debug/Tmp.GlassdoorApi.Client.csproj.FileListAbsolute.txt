@@ -1,7 +1,0 @@
-C:\Projects\Tmp.GlassdoorApi\Tmp.GlassdoorApi.Client\bin\Debug\Tmp.GlassdoorApi.Client.dll
-C:\Projects\Tmp.GlassdoorApi\Tmp.GlassdoorApi.Client\bin\Debug\Tmp.GlassdoorApi.Client.pdb
-C:\Projects\Tmp.GlassdoorApi\Tmp.GlassdoorApi.Client\bin\Debug\Newtonsoft.Json.dll
-C:\Projects\Tmp.GlassdoorApi\Tmp.GlassdoorApi.Client\bin\Debug\Newtonsoft.Json.xml
-C:\Projects\Tmp.GlassdoorApi\Tmp.GlassdoorApi.Client\obj\Debug\Tmp.GlassdoorApi.Client.csprojResolveAssemblyReference.cache
-C:\Projects\Tmp.GlassdoorApi\Tmp.GlassdoorApi.Client\obj\Debug\Tmp.GlassdoorApi.Client.dll
-C:\Projects\Tmp.GlassdoorApi\Tmp.GlassdoorApi.Client\obj\Debug\Tmp.GlassdoorApi.Client.pdb
