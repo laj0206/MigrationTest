@@ -16,10 +16,18 @@ namespace Tmp.GlassdoorApi.Client
             _baseApiClient = baseApiClient;
         }
 
-        public Task<CompanyInterviewResponse> GetCompanyInterviewsAsync(int companyId)
+        public Task<CompanyInterviewResponse> GetCompanyInterviewsAsync(int companyId,
+            string jobTitle = "",
+            string companyName = "",
+            string ticker = "",
+            bool? includeReviewText = null)
         {
             var client = _baseApiClient.GetClient();
-            var result = client.GetCompanyInterviewsAsync(companyId);
+            var result = client.GetCompanyInterviewsAsync(companyId,
+                jobTitle,
+                companyName,
+                ticker,
+                includeReviewText);
 
             return result;
         }

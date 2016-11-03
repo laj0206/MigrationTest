@@ -9,6 +9,10 @@ namespace Tmp.GlassdoorApi.Client
 {
     public interface ICompanyApiClient
     {
-        Task<CompanySearchResponse> GetCompanies();
+        Task<CompanySearchResponse> GetCompaniesAsync(string companyName = "",
+            string location = "",
+            string city = "",
+            string state = "",
+            string country = "");
     }
 }

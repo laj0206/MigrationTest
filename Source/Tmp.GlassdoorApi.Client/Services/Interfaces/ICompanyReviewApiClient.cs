@@ -9,6 +9,11 @@ namespace Tmp.GlassdoorApi.Client
 {
     public interface ICompanyReviewApiClient
     {
-        Task<CompanyReviewResponse> GetCompanyReview(int companyId);
+        Task<CompanyReviewResponse> GetCompanyReview(int companyId,
+            string jobTitle = "",
+            string companyName = "",
+            string ticker = "",
+            int? filterReviewRating = null,
+            bool? includeReviewText = null);
     }
 }

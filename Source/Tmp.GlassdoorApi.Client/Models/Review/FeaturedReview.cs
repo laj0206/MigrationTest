@@ -16,7 +16,7 @@ namespace Tmp.GlassdoorApi.Client.Models
         public string CurrentJob { get; private set; }
 
         [JsonProperty("reviewDateTime")]
-        public DateTime ReviewDateTime { get; private set; }
+        public DateTime? ReviewDateTime { get; private set; }
 
         [JsonProperty("jobTitle")]
         public string JobTitle { get; private set; }

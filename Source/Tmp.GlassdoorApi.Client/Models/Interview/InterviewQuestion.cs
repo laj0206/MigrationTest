@@ -28,7 +28,7 @@ namespace Tmp.GlassdoorApi.Client.Models
         public string Question { get; private set; }
 
         [JsonProperty("date")]
-        public DateTime Date { get; private set; }
+        public DateTime? Date { get; private set; }
 
         [JsonProperty("helpfulCount")]
         public int HelpfulCount { get; private set; }

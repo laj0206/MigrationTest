@@ -65,9 +65,9 @@ namespace Tmp.GlassdoorApi.Client
 			string jobTitle = "",            
             string employerName = "",
             string ticker = "",            
-            string callBack = "",
 			int? filterReviewRating = null,
-            bool? includeReviewText = null
+            bool? includeReviewText = null,
+            string callBack = ""
             )
         {
             var parameters = GetBasicQueryCollection();

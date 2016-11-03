@@ -46,7 +46,7 @@ namespace Tmp.GlassdoorApi.Client.Models
         public int Id { get; private set; }
 
         [JsonProperty("reviewDateTime")]
-        public DateTime ReviewDateTime { get; private set; }
+        public DateTime? ReviewDateTime { get; private set; }
 
         [JsonProperty("newReviewFlag")]
         public bool NewReviewFlag { get; private set; }
@@ -61,7 +61,7 @@ namespace Tmp.GlassdoorApi.Client.Models
         public string Location { get; private set; }
 
         [JsonProperty("interviewDate")]
-        public DateTime InterviewDate { get; private set; }
+        public DateTime? InterviewDate { get; private set; }
 
         [JsonProperty("processDifficulty")]
         public string ProcessDifficulty { get; private set; }

@@ -16,10 +16,18 @@ namespace Tmp.GlassdoorApi.Client
             _baseApiClient = baseApiClient;
         }
 
-        public Task<CompanySearchResponse> GetCompanies()
+        public Task<CompanySearchResponse> GetCompaniesAsync(string companyName = "",
+            string location = "",
+            string city = "",
+            string state = "",
+            string country = "")
         {
             var client = _baseApiClient.GetClient();
-            var result = client.GetCompaniesAsync("CocaCola");
+            var result = client.GetCompaniesAsync(companyName, 
+                location,
+                city,
+                state,
+                country);
 
             return result;
         }
