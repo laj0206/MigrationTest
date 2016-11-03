@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0A6795FE-FEF8-4225-BE2C-4F16439E5A7B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tmp.GlassdoorApi.Client</RootNamespace>
+    <AssemblyName>Tmp.GlassdoorApi.Client</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Exceptions\GlassdoorException.cs" />
+    <Compile Include="Models\Overview\Award.cs" />
+    <Compile Include="Models\Company\CompanyPhoto.cs" />
+    <Compile Include="Models\Company\Company.cs" />
+    <Compile Include="Models\Company\Ceo.cs" />
+    <Compile Include="Models\Company\CompanyBase.cs" />
+    <Compile Include="Models\Company\CompanyDetail.cs" />
+    <Compile Include="Models\Interview\InterviewResult.cs" />
+    <Compile Include="Models\Interview\InterviewQuestion.cs" />
+    <Compile Include="Models\Overview\OverReviewSalary.cs" />
+    <Compile Include="Models\Overview\OverviewInterview.cs" />
+    <Compile Include="Models\Overview\OverviewReview.cs" />
+    <Compile Include="Models\Overview\CompanyOverviewResult.cs" />
+    <Compile Include="Models\Rating\CompanyRatingDetail.cs" />
+    <Compile Include="Models\Rating\CompanyRatingSearchResult.cs" />
+    <Compile Include="Models\Rating\IndividualRating.cs" />
+    <Compile Include="Models\Rating\ReviewTrend.cs" />
+    <Compile Include="Models\Rating\WeeklyHistogram.cs" />
+    <Compile Include="Models\Review\CompanyReview.cs" />
+    <Compile Include="Models\Review\CompanyReviewResult.cs" />
+    <Compile Include="Models\Company\CompanySearchResult.cs" />
+    <Compile Include="Models\Interview\Interview.cs" />
+    <Compile Include="Models\Review\FeaturedReview.cs" />
+    <Compile Include="Models\Company\Image.cs" />
+    <Compile Include="Models\Review\ReviewHighlight.cs" />
+    <Compile Include="Models\Review\ReviewHighlights.cs" />
+    <Compile Include="Models\Salary\SalaryGroup.cs" />
+    <Compile Include="Models\WebResponse\CompanyInterviewResponse.cs" />
+    <Compile Include="Models\WebResponse\CompanyOverviewResponse.cs" />
+    <Compile Include="Models\WebResponse\CompanyRatingResponse.cs" />
+    <Compile Include="Models\WebResponse\CompanyReviewResponse.cs" />
+    <Compile Include="Models\WebResponse\CompanySearchResponse.cs" />
+    <Compile Include="Models\WebResponse\Response.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\BaseApiClient.cs" />
+    <Compile Include="Services\CompanyApiClient.cs" />
+    <Compile Include="Services\CompanyInterviewApiClient.cs" />
+    <Compile Include="Services\CompanyOverviewApiClient.cs" />
+    <Compile Include="Services\CompanyRatingApiClient.cs" />
+    <Compile Include="Services\CompanyReviewApiClient.cs" />
+    <Compile Include="Services\Interfaces\IBaseApiClient.cs" />
+    <Compile Include="Services\Interfaces\ICompanyInterviewApiClient.cs" />
+    <Compile Include="Services\Interfaces\ICompanyOverviewApiClient.cs" />
+    <Compile Include="Services\Interfaces\ICompanyRatingApiClient.cs" />
+    <Compile Include="Services\Interfaces\ICompanyReviewApiClient.cs" />
+    <Compile Include="Services\Interfaces\ICompanyApiClient.cs" />
+    <Compile Include="Services\GlassdoorApiConfiguration.cs" />
+    <Compile Include="Utilities\GlassdoorCategories.cs" />
+    <Compile Include="Utilities\GlassdoorQueryActions.cs" />
+    <Compile Include="Utilities\GlassdoorQueryParameters.cs" />
+    <Compile Include="Utilities\HttpRequester.cs" />
+    <Compile Include="Utilities\StringExtension.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
