@@ -14,10 +14,10 @@ namespace Tmp.GlassdoorApi
         {
             //just for testing
             var baseService = new BaseApiClient();
-            var client = new CompanyRatingApiClient(baseService);
+            var client = new CompanyRatingApiClient(baseService); 
             //end of testing
 
-            var testabc = client.GetCompanyRatingsAsync(161).Result;
+            //var testabc = client.GetCompanyRatingsAsync(161).Result;
             Console.WriteLine("done");
         }
 
