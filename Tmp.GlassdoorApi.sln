@@ -7,9 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tmp.GlassdoorApi", "Source\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tmp.GlassdoorApi.Client", "Source\Tmp.GlassdoorApi.Client\Tmp.GlassdoorApi.Client.csproj", "{0A6795FE-FEF8-4225-BE2C-4F16439E5A7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tmp.GlassdoorApi.Client.UnitTests", "Tmp.GlassdoorApi.Client.UnitTests\Tmp.GlassdoorApi.Client.UnitTests.csproj", "{7DA4D02B-18D4-4471-A046-976495D09FC3}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{83CF26DD-CBB4-49FA-87FB-0AA425317DBF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tmp.GlassdoorApi.Client.UnitTests", "Test\Tmp.GlassdoorApi.Client.UnitTests\Tmp.GlassdoorApi.Client.UnitTests.csproj", "{7DA4D02B-18D4-4471-A046-976495D09FC3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,8 +30,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{7DA4D02B-18D4-4471-A046-976495D09FC3} = {83CF26DD-CBB4-49FA-87FB-0AA425317DBF}
 	EndGlobalSection
 EndGlobal

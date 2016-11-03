@@ -73,7 +73,7 @@
     <Compile Include="Utilities\API.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Source\Tmp.GlassdoorApi.Client\Tmp.GlassdoorApi.Client.csproj">
+    <ProjectReference Include="..\..\Source\Tmp.GlassdoorApi.Client\Tmp.GlassdoorApi.Client.csproj">
       <Project>{0a6795fe-fef8-4225-be2c-4f16439e5a7b}</Project>
       <Name>Tmp.GlassdoorApi.Client</Name>
     </ProjectReference>
