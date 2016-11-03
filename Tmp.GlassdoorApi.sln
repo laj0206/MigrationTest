@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tmp.GlassdoorApi", "Tmp.GlassdoorApi\Tmp.GlassdoorApi.csproj", "{1A59BB4B-2AC6-4248-B2F1-B65AFC69FF91}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tmp.GlassdoorApi", "Source\Tmp.GlassdoorApi\Tmp.GlassdoorApi.csproj", "{1A59BB4B-2AC6-4248-B2F1-B65AFC69FF91}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tmp.GlassdoorApi.Client", "Tmp.GlassdoorApi.Client\Tmp.GlassdoorApi.Client.csproj", "{0A6795FE-FEF8-4225-BE2C-4F16439E5A7B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tmp.GlassdoorApi.Client", "Source\Tmp.GlassdoorApi.Client\Tmp.GlassdoorApi.Client.csproj", "{0A6795FE-FEF8-4225-BE2C-4F16439E5A7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
