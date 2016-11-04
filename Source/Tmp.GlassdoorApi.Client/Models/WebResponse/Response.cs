@@ -10,9 +10,9 @@ namespace Tmp.GlassdoorApi.Client.Models
     public class Response
     {
         [JsonProperty("success")]
-        public bool Success { get; set; }
+        public bool Success { get; private set; }
 
         [JsonProperty("status")]
-        public string Status { get; set; }
+        public string Status { get; private set; }
     }
 }

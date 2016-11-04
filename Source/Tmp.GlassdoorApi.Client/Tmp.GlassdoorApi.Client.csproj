@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Exceptions\GlassdoorException.cs" />
+    <Compile Include="Models\ApiConfiguration.cs" />
     <Compile Include="Models\Overview\Award.cs" />
     <Compile Include="Models\Company\CompanyPhoto.cs" />
     <Compile Include="Models\Company\Company.cs" />
@@ -98,9 +99,7 @@
     <Compile Include="Utilities\HttpRequester.cs" />
     <Compile Include="Utilities\StringExtension.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\Job\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>

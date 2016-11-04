@@ -10,6 +10,6 @@ namespace Tmp.GlassdoorApi.Client.Models
     public class CompanyOverviewResponse: Response
     {
         [JsonProperty("response")]
-        public CompanyOverviewResult Result { get; set; }
+        public CompanyOverviewResult Result { get; private set; }
     }
 }

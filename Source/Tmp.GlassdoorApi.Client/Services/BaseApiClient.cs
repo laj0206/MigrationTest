@@ -3,22 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Tmp.GlassdoorApi.Client.Models;
 
 namespace Tmp.GlassdoorApi.Client
 {
     public class BaseApiClient: IBaseApiClient
     {
-        private int partnerId = 87106;
-        private string apiKey = "en67yaE36Vw";
-        private string baseUrl = "http://api.glassdoor.com/api/api.htm";
+        private GlassdoorApiConfiguration Api { get; set; }
 
-        public BaseApiClient() { }
+        public BaseApiClient(GlassdoorApiConfiguration api)
+        {
+            this.Api = api;
+        }
 
         public GlassdoorApiConfiguration GetClient()
         {
-            return new GlassdoorApiConfiguration(baseUrl,
-                partnerId,
-                apiKey);
+            return this.Api;
         }
     }
 }

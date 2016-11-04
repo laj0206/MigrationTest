@@ -2,6 +2,7 @@
 using Moq;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Tmp.GlassdoorApi.Client.Models;
 
 namespace Tmp.GlassdoorApi.Client.UnitTests
 {
@@ -22,24 +23,25 @@ namespace Tmp.GlassdoorApi.Client.UnitTests
         [TestMethod]
         public void GetCompaniesAsyncTestMethod()
         {
-            var client = new GlassdoorApiConfiguration(API.baseUrl, API.partnerId, API.apiKey);
+            var api = new GlassdoorApiConfiguration(GlassdoorApiParams.BaseUrl,
+                GlassdoorApiParams.PartnerId,
+                GlassdoorApiParams.ApiKey,
+                GlassdoorApiParams.Vesrion,
+                GlassdoorApiParams.Format,
+                GlassdoorApiParams.UserIP,
+                GlassdoorApiParams.UserAgent);
 
-            _baseApiClient.Setup(x => x.GetClient()).Returns(client);
+            _baseApiClient.Setup(x => x.GetClient()).Returns(api);
 
             var apiClient = new CompanyApiClient(_baseApiClient.Object);
+            
+            var task = apiClient.GetCompaniesAsync("tmp worldwide");
+            //task.Wait();
+            var response = task.Result;
 
-            try
-            {
-                var task = apiClient.GetCompaniesAsync("abc");
-                //task.Wait();
-                var response = task.Result;
-                
-                Assert.IsTrue(response?.Success == true);
-            }
-            catch (Exception ex)
-            {
-                Assert.IsTrue(false);
-            }
+            Assert.IsNotNull(response);
+            Assert.IsTrue(response.Success == true);
+            Assert.IsNotNull(response.Result);
         }
     }
 }

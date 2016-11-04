@@ -70,7 +70,7 @@
     <Compile Include="ApiClientTest\CompanyRatingApiClientTest.cs" />
     <Compile Include="ApiClientTest\CompanyReviewApiClientTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utilities\API.cs" />
+    <Compile Include="Utilities\GlassdoorApiParams.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Source\Tmp.GlassdoorApi.Client\Tmp.GlassdoorApi.Client.csproj">

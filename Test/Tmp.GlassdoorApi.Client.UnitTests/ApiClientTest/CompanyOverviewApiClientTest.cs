@@ -22,24 +22,24 @@ namespace Tmp.GlassdoorApi.Client.UnitTests
         [TestMethod]
         public void GetCompanyOverviewsAsyncTestMethod()
         {
-            var client = new GlassdoorApiConfiguration(API.baseUrl, API.partnerId, API.apiKey);
+            var api = new GlassdoorApiConfiguration(GlassdoorApiParams.BaseUrl,
+                GlassdoorApiParams.PartnerId,
+                GlassdoorApiParams.ApiKey,
+                GlassdoorApiParams.Vesrion,
+                GlassdoorApiParams.Format,
+                GlassdoorApiParams.UserIP,
+                GlassdoorApiParams.UserAgent);
 
-            _baseApiClient.Setup(x => x.GetClient()).Returns(client);
+            _baseApiClient.Setup(x => x.GetClient()).Returns(api);
 
             var apiClient = new CompanyOverviewApiClient(_baseApiClient.Object);
+            var task = apiClient.GetCompanyOverviewsAsync(1);
 
-            try
-            {
-                var task = apiClient.GetCompanyOverviewsAsync(1);
+            var response = task.Result;
 
-                var response = task.Result;
-
-                Assert.IsTrue(response?.Success == true);
-            }
-            catch (Exception ex)
-            {
-                Assert.IsTrue(false);
-            }
+            Assert.IsNotNull(response);
+            Assert.IsTrue(response.Success == true);
+            Assert.IsNotNull(response.Result);
         }
     }
 }

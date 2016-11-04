@@ -11,33 +11,24 @@ using Tmp.GlassdoorApi.Client.Models;
 
 namespace Tmp.GlassdoorApi.Client
 {
-    public class GlassdoorApiConfiguration
+    public class GlassdoorApiConfiguration : ApiConfiguration
     {
-        public string BasicUrl { get; private set; }
-        public int PartnerID { get; private set; }
-        public string APIKey { get; private set; }
-        public string UserIP { get; private set; }
-        public int Version { get; private set; }
-        public string Format { get; private set; }
-        public string UserAgent { get; private set; }
-
         public GlassdoorApiConfiguration(
             string baseUrl,
             int partnerId,
             string apiKey,
-            int version = 1,
-            string format = "json",            
-            string userIp = "0.0.0.0",
-            string userAgent = ""
-            )
+            int version,
+            string format,
+            string userIp,
+            string userAgent)
+            : base(baseUrl,
+                partnerId,
+                apiKey,
+                version,
+                format,
+                userIp,
+                userAgent)
         {
-            this.BasicUrl = baseUrl;
-            this.PartnerID = partnerId;
-            this.APIKey = apiKey;
-            this.UserIP = userIp;
-            this.Version = version;
-            this.Format = format;
-            this.UserAgent = userAgent;
         }
 
         public Task<CompanySearchResponse> GetCompaniesAsync(string keyword = "",

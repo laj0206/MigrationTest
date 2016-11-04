@@ -12,10 +12,19 @@ namespace Tmp.GlassdoorApi
     {
         static void Main(string[] args)
         {
-            //just for testing
-            var baseService = new BaseApiClient();
-            var client = new CompanyRatingApiClient(baseService); 
-            //end of testing
+            #region Glassdoor API set up
+            var api = new GlassdoorApiConfiguration(GlassdoorApiParams.BaseUrl,
+                GlassdoorApiParams.PartnerId,
+                GlassdoorApiParams.ApiKey,
+                GlassdoorApiParams.Vesrion,
+                GlassdoorApiParams.Format,
+                GlassdoorApiParams.UserIP,
+                GlassdoorApiParams.UserAgent);
+            #endregion
+
+            //Temp testing
+            var baseService = new BaseApiClient(api);
+            var client = new CompanyRatingApiClient(baseService);
 
             //var testabc = client.GetCompanyRatingsAsync(161).Result;
             Console.WriteLine("done");
