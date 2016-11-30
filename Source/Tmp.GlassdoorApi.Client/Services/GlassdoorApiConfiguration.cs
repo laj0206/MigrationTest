@@ -58,7 +58,9 @@ namespace Tmp.GlassdoorApi.Client
             string ticker = "",            
 			int? filterReviewRating = null,
             bool? includeReviewText = null,
-            string callBack = ""
+            string callBack = "",
+            int pageSize = 20,
+            int pageNumber = 1
             )
         {
             var parameters = GetBasicQueryCollection();
@@ -70,7 +72,8 @@ namespace Tmp.GlassdoorApi.Client
             parameters.Add(GlassdoorQueryParameters.JobTitle, jobTitle);
             parameters.Add(GlassdoorQueryParameters.FilterReviewRating, filterReviewRating.HasValue ? filterReviewRating.ToString() : string.Empty);
             parameters.Add(GlassdoorQueryParameters.IncludeReviewText, includeReviewText.HasValue ? includeReviewText.ToString() : string.Empty);
-
+            parameters.Add(GlassdoorQueryParameters.PageNumber, pageNumber.ToString());
+            parameters.Add(GlassdoorQueryParameters.PageSize, pageSize.ToString());
             return GetResponseAsync<CompanyReviewResponse>(parameters);
         }
 
